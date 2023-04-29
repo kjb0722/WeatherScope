@@ -14,14 +14,15 @@ namespace WeatherScope.Controllers
             _weatherService = weatherService;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(double? latitude, double? longitude)
         {
-            // 예시 위치 (위도, 경도)
-            double latitude = 37.7749;
-            double longitude = -122.4194;
+            if (latitude.HasValue && longitude.HasValue)
+            {
+                var weather = await _weatherService.GetWeatherAsync(latitude.Value, longitude.Value);
+                return View(weather);
+            }
 
-            Weather weather = await _weatherService.GetWeatherAsync(latitude, longitude);
-            return View(weather);
+            return View();
         }
 
         public IActionResult Privacy()

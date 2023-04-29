@@ -6,7 +6,7 @@ namespace WeatherScope.Services
     public class WeatherService
     {
         private readonly HttpClient _httpClient;
-        private readonly string _apiKey = "6569f3bc017a694cdf52ce429c1897ae";
+        private readonly string _apiKey = "api key";
         private readonly string _baseUrl = "http://api.openweathermap.org/data/2.5/weather";
 
         public WeatherService(HttpClient httpClient)

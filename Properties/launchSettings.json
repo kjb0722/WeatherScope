@@ -1,0 +1,29 @@
+{
+  "profiles": {
+    "WeatherScope": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "OpenWeatherMapApiKey": "6569f3bc017a694cdf52ce429c1897ae"
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "https://localhost:7068;http://localhost:5049"
+    },
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  },
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:4630",
+      "sslPort": 44389
+    }
+  }
+}

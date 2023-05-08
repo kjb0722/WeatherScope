@@ -1,0 +1,21 @@
+﻿@using WeatherScope.Services
+@model WeatherResponse
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<form id="getWeatherForm" method="post">
+    <input type="hidden" id="latitude" name="latitude" />
+    <input type="hidden" id="longitude" name="longitude" />
+</form>
+
+@if (Model?.Weather != null)
+{
+    <h2>@Model.Name</h2>
+    <p>Temperature: @Model.Main.Temp &deg;C</p>
+    <p>Feels Like: @Model.Main.Feels_like &deg;C</p>
+    <p>Humidity: @Model.Main.Humidity %</p>
+    <p>Weather: @Model.Weather.First().Main</p>
+    <p>Description: @Model.Weather.First().Description</p>
+}
